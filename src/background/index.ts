@@ -81,12 +81,12 @@ browserAction.onClicked.addListener(async function(activeTab, info)
     const videoMatch = activeTab.url?.match(VIDEO_URL_REGEX);
     const channelMatch = activeTab.url?.match(CHANNEL_URL_REGEX);
     if(videoMatch && videoMatch?.[2].length === 11) {
-      tabs[createOrUpdate]({ url: `https://holodex.net/watch/${videoMatch?.[2]}` });
+      tabs[createOrUpdate]({ url: `https://staging.holodex.net/multiview/AAUY${videoMatch?.[2]}%2CUAEYchat0` });
     }
     else if(channelMatch && channelMatch[1].length === 24) {
-      tabs[createOrUpdate]({ url: `https://holodex.net/channel/${channelMatch?.[1]}` });
+      tabs[createOrUpdate]({ url: `https://staging.holodex.net/channel/${channelMatch?.[1]}` });
     }
     else {
-      tabs[createOrUpdate]({ url: "https://holodex.net" });
+      tabs[createOrUpdate]({ url: "https://staging.holodex.net" });
     }
 });
