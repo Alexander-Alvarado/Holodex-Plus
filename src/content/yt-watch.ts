@@ -15,7 +15,8 @@ function openHolodex() {
   const videoID = currentUrl.searchParams.get("v");
   const t = currentUrl.searchParams.get("t");
   const holodexUrl = `https://staging.holodex.net/multiview/AAUY${videoID}%2CUAEYchat0`;
-  window.open(holodexUrl);
+  //window.open(holodexUrl);
+  document.location = holodexUrl
 }
 
 function cleanup() {
